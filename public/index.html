@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pathfinder</title>
+
+    <link rel="icon"  href="/img/icon.png">
+
+    <link rel="stylesheet" href="css/fancyfont.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/2.css"/>
+
+    <script src="js/variables.js" defer ></script>
+    <script src="js/helper.js" defer></script>
+    <script src="js/algorithms/dij.js" defer></script>
+    <script src="js/algorithms/bfs.js" defer></script>
+    <script src="js/algorithms/astar.js" defer></script>
+    <script src="js/index.js" defer></script>
+    <script src="js/bg.js" defer></script> 
+</head>
+<body>
+    <svg width="3000" height="3000" class="svg_overlay svg_overlay_0"></svg>
+    <svg width="3000" height="3000" class="svg_overlay svg_overlay_1"></svg>
+    <div class="header">Pathfinder - Visualizing Graph Theory Algorithms</div>
+    <div class="body">
+        <svg width="3000" height="1560" class="bg svg_overlay_2"></svg>
+        <div class="main">
+            <div class="canvas_options">
+                <div class="input_fields">
+                    <div class="type_field">
+                        <div class="type_field_dropdown algorithm_selection">
+                            <div class="type_select_title current_algoirthm_display">Select Search Algorithm</div>
+                            <div class="type_select bfs">BFS (Breadth-First Search)</div>
+                            <div class="type_select dij">Dijkstra's Algoirthm</div>
+                            <div class="type_select astar">A* Algoirthm</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="action_fields">
+                    <div class="button action_option settings_button">Settings</div>
+                    <div class="button action_option clear_button">Clear</div>
+                    <div class="button action_option restore_button">Restore</div>
+                    <div class="button action_option refresh_button">Refresh</div>
+                    <div class="button action_option play_button">Play</div>
+                </div>
+                
+            </div>
+            <div class="canvas">
+                <div class="settings_overlay">
+                    <div class="settings_title">Settings</div>
+                    <div class="option">
+                        <div class="size_title">Grid Dimensions:</div>
+                        <input class="input_text rows_input" type="text" value="10"/>
+                        <input class="input_text cols_input" type="text" value="10"/>
+                    </div>
+                    <div class="option">
+                        <div class="toggle_input">Weighted</div>
+                        <input type="checkbox" class="input_switch weighted_toggle"/>
+                    </div>
+                    <div class="option">
+                        <div class="size_title rows">Weight Range:</div>
+                        <input class="input_text weight_min" type="text" value="0"/>
+                        <input class="input_text weight_max" type="text" value="10"/>
+                    </div>
+                    <div class="option">
+                        <div class="size_title rows">Speed:</div>
+                        <input class="input_text spd_input" type="text" value="100"/>
+                    </div>
+                    <div class="option">
+                        <div class="toggle_input">Weight Numbers</div>
+                        <input type="checkbox" class="input_switch detail_toggle"/>
+                    </div>
+                    <div class="settings_actions">
+                        <div class="button1 settings_apply">Apply</div>
+                        <div class="button1 settings_cancel">Cancel</div>
+                    </div>
+                </div>
+                <div class="grid">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="break"></div>
+
+    <div class="body2">
+        <svg width="3000" height="2100" class="bg svg_overlay_3"></svg>
+        <div class="main2">
+            <div class="algo_title">BFS Algorithm</div>
+            <div class="algo_desc">
+                <div class="algo_desc_container">
+                    <div class="param">
+                        <div class="param_title">Parameters</div>
+                        <p class="param_pg">
+                        </p>
+                    </div>
+                    <div class="method">
+                        <div class="method_title">Procedure</div>
+                        <p class="method_pg">
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="sample">
+                <div class="sample_container">
+                    <div class="language_selection">
+                        <div class="lang_option current_lang java">Java</div>
+                        <div class="lang_option cpp">C++</div>
+                        <div class="lang_option python">Python</div>
+                    </div>
+                    <div class="code_container">
+                        <p class="sample_code">
+                            public class Main {<br>
+<br>
+<span class="tab3"></span>public static void main(String[] args) {<br>
+                              <br>
+                              <span class="tab3"></span><span class="tab3"></span>int num = 29;<br>
+                              <span class="tab3"></span><span class="tab3"></span>boolean flag = false;<br>
+                              <span class="tab3"></span><span class="tab3"></span>for (int i = 2; i &lt; = num / 2; ++i) {<br>
+                                <span class="tab3"></span><span class="tab3"></span>// condition for nonprime number<br>
+                                    <span class="tab3"></span><span class="tab3"></span><span class="tab3"></span>if (num % i == 0) {<br>
+                                        <span class="tab3"></span><span class="tab3"></span><span class="tab3"></span><span class="tab3"></span>flag = true;<br>
+                                        <span class="tab3"></span><span class="tab3"></span><span class="tab3"></span><span class="tab3"></span>break;<br>
+                                        <span class="tab3"></span><span class="tab3"></span><span class="tab3"></span>}<br>
+                                        <span class="tab3"></span><span class="tab3"></span>}<br>
+                              <br>
+                              <span class="tab3"></span>if (!flag)<br>
+                              <span class="tab3"></span><span class="tab3"></span>System.out.println(num + " is a prime number.");<br>
+                              <span class="tab3"></span>else<br>
+                              <span class="tab3"></span><span class="tab3"></span>System.out.println(num + " is not a prime number.");<br>
+                              <span class="tab3"></span>}<br>
+                              }<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,20 @@
+> Initialize queue with the start position as the only element
+> Initialize MxN distance matrix
+<t>    > Set the dist value of the start position as 0, all else -1
+while true :=
+<t>    > Pop the position with the lowest dist value, excluding -1, and assign it as the current node
+<t>   >> If the current node is the end node, break
+<t>    >> If the size of the queue was 0, there is no valid traversal path
+<t>   for every neighbour of the current node :=
+<t><t>      > If the neighbour dist val = -1 or > current dist val + cost to neighbour
+<t><t><t>          >> If the neighbour dist value = -1, add to queue
+<t><t><t>          > Set the neighbour dist val as current dist val + cost to neighbour
+<t>   > Filler text
+<t>   > Filler text
+<t>   > Filler text
+<t>   > Filler text
+<t>   > Filler text
+<t>   > Filler text
+<t>   > Filler text
+<t>   > Filler text
+<t>   > Filler text

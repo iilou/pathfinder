@@ -1,0 +1,11 @@
+<s>M, N</s> - M x N Grid
+<s>startPos</s> - Initial position
+<t>r - row
+<t>c - column
+<s>endPos</s> - Target destination
+<t>r - row
+<t>c - column
+<s>gridLayout</s> - MxN Array
+<t>= -1 - obstacle
+<t>= 0 - unweighted
+<t>> 0 - cost to traverse into
